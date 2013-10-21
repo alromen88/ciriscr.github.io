@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="">
+  <head>
+    <title>{{page.title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="utf-8">
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <meta http-equiv="Content-Language" content="ES">
+    <meta name="Subject" content="Blog de tecnologías de Ciris">
+    <meta name="description" content="Blog sobre Scala, MongoDB y desarrollo Web de Ciris">
+    <meta name="abstract" content="Blog de Ciris">
+    <meta name="classification" content="Blog, programación, tecnologías, web">
+    <meta name="keywords" content="blog">
+    <meta name="country" content="Costa Rica">
+
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="http://www.ciriscr.com/recursos/estilos/index.css">
+    <link rel="stylesheet" href="http://www.ciriscr.com/recursos/estilos/internas.css">    
+
+
+    <link rel="icon" type="image/png" href="http://www.ciriscr.com/recursos/imagenes/favicon.png"/>
+    <link rel="shortcut icon" href="http://www.ciriscr.com/recursos/imagenes/favicon.png" type="image/png" />    
+    <link href="humans.txt" rel="author" type="text/plain">
+    <link href='http://fonts.googleapis.com/css?family=Capriola' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    <meta name="Robots" content="index,follow">
+    <meta name="author" content="Ciris Informatic Solutions" >
+    <meta name="revised" content="Ciris Informatic Solutions, 30/10/2013" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="recursos/js/html5shiv.js"></script>
+      <script src="recursos/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav id="menuInterno" class="navbar" role="navigation" data-spy="affix">      
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="index.html">
+              <img id="logocirismini" src="http://www.ciriscr.com/recursos/imagenes/logocirismini.png"
+                     alt="Ciris Informatic Solutions" title="Ciris Informatic Solutions"/>
+            </a>
+          </div>
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="desarrollo.html">Desarrollo</a></li>
+              <li><a href="servicios.html">Servicios</a></li>
+              <li><a href="acercade.html">Compañía</a></li>
+              <li><a href="contacto.html">Contáctenos</a></li>
+              <li><a href="empleos.html">Empleos</a></li>
+              <li><a href="blog.html" class="active">Blog</a></li>
+            </ul>            
+          </div><!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <header>
+      <div id="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <img id="nubes" alt="Cloud" src="http://www.ciriscr.com/recursos/imagenes/nubes.png" class="img-responsive">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 centrado">
+              <h2>Blog sobre Scala, MongoDB, AngularJS y más</h2>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </header>
+    <section>
+      <div class="container paddingHorizontal">        
+        {{content}}
+      </div>
+    </section>
+    <!--<div class="lenguaje">
+      <a class="ingles" href="en/blog.html">English</a>
+    </div>-->
+    <section class="fondoCeleste semifooter">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <img id="logociris" src="http://www.ciriscr.com/recursos/imagenes/logociris.png" class="img-responsive img-centrada"
+                    alt="Ciris Informatic Solutions" title="Ciris Informatic Solutions"/>
+            </div>            
+          </div>
+          <div class="row">
+            <div class="col-md-12 centrado">
+              <h5>Programando desde Costa Rica con pasión</h5>
+            </div>
+          </div>
+          <div class="row centrado redesSociales">
+            <div class="col-md-3">
+              <a class="facebook" target="_blank" href="http://www.facebook.com/ciriscr">
+                Facebook
+                </a>
+            </div>
+            <div class="col-md-3">
+              <a class="twitter" target="_blank" href="http://www.twitter.com/ciriscr">
+                Twitter
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a class="google" target="_blank" href="https://plus.google.com/105786440829974527230">
+                Google+
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a class="linkedin" target="_blank"
+                           href="http://www.linkedin.com/company/ciris-informatic-solutions">
+                           LinkedIn
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <img alt="Cloud" src="http://www.ciriscr.com/recursos/imagenes/nubes.png" class="img-responsive">
+            </div>
+          </div> 
+        </div>          
+      </div>
+    </section>
+    
+    <footer class="paddingHorizontal">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 centrado">
+            3-101-625445 | San José, Costa Rica
+          </div>
+          <div class="col-md-6 col-md-offset-3 centrado">
+            2013 | <b>Ciris Informatic Solutions S.A</b>
+          </div>
+          <div class="col-md-6 col-md-offset-3 centrado">
+            Creado con <a href="http://twitter.github.io/bootstrap">Twitter Bootstrap</a>
+            y <a href="http://glyphicons.com">Glyphicons</a>
+          </div>
+        </div>
+      </div>        
+    </footer>    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44718422-1', 'ciriscr.com');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
