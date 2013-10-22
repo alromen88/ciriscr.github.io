@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "Prueba de post"
-date:   2013-10-21 15:50:01
-categories: jekyll prueba
+tags: bienvenida blog scala mongodb angularjs
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
