@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Prueba de post"
+title:  "¡Inaguración del Blog de Ciris!"
 tags: bienvenida blog scala mongodb angularjs
 autor: Pablo Peraza
+imagenAutor: pious
 ---
 
 <p>

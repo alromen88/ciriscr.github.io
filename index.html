@@ -3,19 +3,27 @@ layout: default
 title: Blog de Scala, MongoDB, AngularJS y más | Ciris Informatic Solutions
 ---
 
-<div id="home">  
-  {% for post in site.posts %}
-    <div class="row paddingHorizontal">
-    	<h1>{{ post.title }}</h1>
-    	<div class="col-md-2">
-    		<h2>{{post.date | date_to_string}}</h2>
-    	</div>
-    	<div class="col-md-10">    		
-    		<p>{{ post.excerpt }}</p>
-    		<a href="{{ post.url }}" class="btn btn-info btn-lg btn-block">Leer Más</a>
-    	</div>
-    	
+<div class="row">
+    <div class="col-md-9">  
+      {% for post in site.posts %}
+        <div class="row paddingHorizontal">
+            
+            <div class="col-md-1">
+                <img src="http://ciriscr.com/recursos/imagenes/{{post.imagenAutor}}.jpg" class="img-responsive"
+                alt="Autor" title="{{post.autor}}"/>
+            </div>
+            <div class="col-md-11">
+                <h1 style="margin: 0; margin-bottom: 5px;"><a href="{{ post.url }}">{{ post.title }}</a></h1>            
+                <label>{{post.date | date_to_string}} | Publicado por {{post.autor}}</label>
+            </div>
+        </div>
+        <div style="margin-bottom:2em">
+            <p>{{ post.excerpt }}</p>
+            <hr>
+        </div>
+      {% endfor %}  
     </div>
-  {% endfor %}
-  
+    <div class="col-md-3">
+        <h2>Categorías</h2>
+    </div>
 </div>

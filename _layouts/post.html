@@ -1,10 +1,26 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<h2 class="meta">{{ page.date | date_to_string }}</h2>
-<h3>{{page.autor}}</h3>
 
-<div class="post">
-{{ content }}
+<div class="row">
+    <div class="col-md-9">        
+        <div class="row paddingHorizontal">            
+            <div class="col-md-1">
+                <img src="http://ciriscr.com/recursos/imagenes/{{page.imagenAutor}}.jpg" class="img-responsive"
+                alt="Autor" title="{{page.autor}}"/>
+            </div>
+            <div class="col-md-11">
+                <h1 style="margin: 0; margin-bottom: 5px;">{{ page.title }}</h1>            
+                <label>{{page.date | date_to_string}} | Publicado por {{page.autor}}</label>
+            </div>
+        </div>
+        <div style="margin-bottom:2em">
+            <p>{{ content }}</p>
+            <hr>
+        </div>
+      
+    </div>
+    <div class="col-md-3">
+        <h2>Categorías</h2>
+    </div>
 </div>
