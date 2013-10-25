@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Patrones de diseño en Scala"
+tags: patrones diseño scala
+autor: Eduardo Obando
+imagenAutor: londo
+---
+
