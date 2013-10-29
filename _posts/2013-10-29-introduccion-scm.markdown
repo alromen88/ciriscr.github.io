@@ -37,7 +37,40 @@ categories: capacitacion capitulo1 scm
 	Es un software que maneja los cambios que se realicen al código de fuente. Los cambios generalmente son identificados por un número de versión. Por ejemplo,
 	el primer conjunto de archivos a guardar es la "revisión 1". Cuando el primer cambio es realizado, el conjunto de archivos resultantes es la "revisión 2", y así sucesivamente. Cada revisión tiene asociada una marca de fecha y tiempo, así como también la persona qué realizó el cambio. Las revisiones pueden ser comparadas, restauradas y/o unidas.
 </p>
+<p>
+	De manera tradicional, los controladores de versiones funcionan bajo la arquitectura cliente-servidor centralizada: Existe un servidor que aloja todo
+	el código de fuente y que sirve dicho código a los clientes (programadores). Todo cambio que se haga, debe pasar por fuerza por este servidor especializado.
+</p>
+<p>
+	Debido a la forma en que se tiende a trabajar y a visualizar el código (y la serie de versiones), se tiene a comparar el historial de version con un árbol, donde hay un "tronco" (trunk) y existen diferentes "ramas de desarrollo" (branches).
+</p>
+<p>
+	Existen también otros conceptos que se aplican para casi todos los sitemas de control de versiones:
+	- Traer cambios
+	- Guardar y empujar cambios
+	- Unir versiones
+	- Conflictos
+	- Head: La versión más reciente (último cambio)
+</p>
+<p>
+	<h3>Desarrollos en paralelo</h3>
+	Cuando existe la necesidad de trabajar en diferentes carecterísticas, o en algoritmos experimentales, se pueden crear nuevas ramas de desarrollo. Esto facilita el desarrollo en paralelo pues en un rama, no es necesario estar actualizando el código con el Head.
+</p>
+<p>
+	<h3>Unión de ramas</h3>
+	Después de haber trabajado en una rama, y ya habiendo probado que todo funcione,
+	se puede "reintegrar" dicha rama de nuevo al trunk.
+</p>
+<p>
+	<h3>Conflictos</h3>
+	Es inevitable, que en algún momento, 2 personas modifiquen el mismo archivo de forma simultanea. Cuando esto paso, la última persona en tratar de guardar sus cambios tendrá un conflicto.
 
+	<p>
+		Un conflicto no es más que haber hecho cambios a un archivo, que ya está desactualizado. Muchas veces, el software controlador de versiones puede resolver conflictos simples, pero en ocasiones es necesario que haya
+		intervención humana: se necesitaría analizar las 2 diferentes versiones y decidir como se deben unir en una versión nueva, que contenga los cambios de
+		las dos versiones en conflicto.
+	</p>
+</p>
 <h2>Qué es un sistema de control de versiones distribuido</h2>
 <p>
 </p>
