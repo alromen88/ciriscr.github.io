@@ -2,27 +2,27 @@
 layout: default
 title: Blog de Scala, MongoDB, AngularJS y más | Ciris Informatic Solutions
 ---
-
 <div class="row">
     <div class="col-md-9">  
       {% for post in paginator.posts %}
-        <div class="row paddingHorizontal">
-            
-            <div class="col-md-1">
-                <img src="http://ciriscr.com/recursos/imagenes/{{post.imagenAutor}}.jpg" class="img-responsive"
-                alt="Autor" title="{{post.autor}}"/>
+        <div>
+            <div class="row paddingHorizontal">            
+                <div class="col-md-1">
+                    <img src="http://ciriscr.com/recursos/imagenes/{{post.imagenAutor}}.jpg" class="img-responsive"
+                    alt="Autor" title="{{post.autor}}"/>
+                </div>
+                <div class="col-md-11">
+                    <h1 style="margin: 0; margin-bottom: 5px;"><a href="{{ post.url }}">{{ post.title }}</a></h1>            
+                    <label>{{post.date | date_to_string}} | Publicado por {{post.autor}}</label>
+                </div>
             </div>
-            <div class="col-md-11">
-                <h1 style="margin: 0; margin-bottom: 5px;"><a href="{{ post.url }}">{{ post.title }}</a></h1>            
-                <label>{{post.date | date_to_string}} | Publicado por {{post.autor}}</label>
+            <div style="margin-bottom:2em">
+                <p>{{ post.excerpt }}</p>
+                <hr/>
             </div>
-        </div>
-        <div style="margin-bottom:2em">
-            <p>{{ post.excerpt }}</p>
-            <hr>
-        </div>
-      {% endfor %}  
+        </div>          
     </div>
+    {% endfor %}
     <div class="col-md-3">
         <h2>Categorías</h2>
     </div>

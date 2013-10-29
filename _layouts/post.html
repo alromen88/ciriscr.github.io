@@ -24,3 +24,40 @@ layout: default
         <h2>Categorías</h2>
     </div>
 </div>
+<div id="page-navigation"> 
+        <div class="clear">&nbsp;</div> 
+        <div class="left"> 
+         
+        </div> 
+
+        <div class="right"> 
+         
+        </div> 
+        <div class="clear">&nbsp;</div> 
+</div>
+<div class="row">
+    <!-- Pagination links -->    
+    <ul class="pager">
+        {% if page.previous.url %}
+        <li class="previous">            
+            <a href="{{page.previous.url}}" title="Entrada previa: 
+            {{page.previous.title}}">&laquo; {{page.previous.title}}</a>             
+        </li>
+        {% else %}
+        <li class="previous disable">            
+            <span>No hay entradas previas</span>             
+        </li>
+        {% endif %}
+        {% if page.next.url %}
+        <li class="next">            
+                <a href="{{page.next.url}}" title="Siguiente entrada: 
+{{page.next.title}}">{{page.next.title}} &raquo; </a> 
+        
+        </li>
+        {% else %}
+        <li class="next disable">            
+            <span>No hay entradas posteriores</span>             
+        </li>
+        {% endif %}
+    </ul>
+</div>
