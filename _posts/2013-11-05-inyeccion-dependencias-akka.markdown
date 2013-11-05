@@ -9,7 +9,7 @@ imagenAutor: pious
 <div class="justificado">
   <p>
     Muchas veces nos encontramos programando en capas, y nos damos cuenta que las capas 
-    de mayor profondidad, no conocen o no tienen disponible el contexto adecuado
+    de mayor profundidad, no conocen o no tienen disponible el contexto adecuado
     para decidir sobre qué recurso usar (Ej. conexión a desarrollo/preproducción/producción,
     etcétera). A continuación voy a describir una posible solución a como inyectar 
     dependencias desde capas superiores, concretamente, como inyectar la conexión a la base
