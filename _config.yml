@@ -3,3 +3,4 @@ markdown: redcarpet
 pygments: true
 lsi: true
 port: 8080
+paginate: 10
