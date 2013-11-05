@@ -73,6 +73,25 @@ categories: capacitacion capitulo1 scm
 </p>
 <h2>Qué es un sistema de control de versiones distribuido</h2>
 <p>
+	A diferencia de los sistemas "tradicionales" o centralizados, donde el esquema 
+	es el de un servidor centralizado de código, en los sistemas distribuídos todos los
+	clientes y pueden ser (y de hecho, lo son) servidores del código fuente. Cada cliente pues,
+	tiene su propio servidor (local) y su propia copia local del código. Aunque esto puede
+	sonar complejo, en la práctica no lo es y uno normalmente no se preocupa por estos aspectos
+	técnicos a la hora de programar.
 </p>
-<h2>Distribuido contra centralizado</h2>
+<p>
+	Habitualmente se fija siempre una máquina como repositorio "base" o principal, que sirve
+	para que todos los desarrolladores puedan compartir sus cambios de forma más eficaz. La
+	diferencia con un sistema centralizado, es que cada vez que uno hace "commit", lo hace en
+	su servidor local, y si se desea compartir sus cambios, es necesario "empujar" (push) sus
+	cambios a algún servidor remoto (que, de nuevo, normalmente se designa un servidor remoto
+	como el servidor principal).
+</p>
+<p>
+	Y con esto llego a esta leve intrudicción a los sistemas de control de versiones. Es un
+	tema bastante amplio y podría escribir varias decenas de páginas sobre este software, pero 
+	mi objetivo es justamente dar una breve introducción al tema. En el próximo tema, estaré
+	comenzando un tutorial del uso de github.
+</p>
 </div>
