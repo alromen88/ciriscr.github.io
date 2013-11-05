@@ -46,12 +46,12 @@ imagenAutor: pious
     <p>
       Tenemos además 2 atributos internos: 1) el objeto DAO (que le pasamos la conexion que
       hemos recibido) y 2) la lógica del actor. Hemos decidido separar en un trait externo
-      la lógica el actor por varias razones, pero por ahora se puede ver como una forma de organizar y especializar nuestro código y a su vez, nos permitirá probar la lógica
+      la lógica del actor por varias razones, pero por ahora se puede ver como una forma de organizar y especializar nuestro código y a su vez, nos permitirá probar la lógica
       independientemente del actor. El DAO, por otro lado, lo he marcado como implícito
       pues la lógica a su vez, espera que el DAO le sea inyectado.
     </p>
     <p>
-      En el receive tenemos defina la función para cuando recibimos un String (el login del
+      En el receive tenemos definida la función para cuando recibimos un String (el login del
       usuario por ejemplo.) Lo único que hacemos es invocar a la lógica y devolver la 
       respuesta al sender.
     </p>
@@ -97,7 +97,7 @@ imagenAutor: pious
 
   <h2>Monad Lector</h2>
   <p>
-    Antes de ver el monad, veamos primero nuestro contexto de conexion.
+    Antes de ver el monad, veamos primero nuestro contexto de conexión.
   </p>
   <code data-gist-id="7313054" 
   data-gist-file="ContextoConexion.scala"
@@ -122,13 +122,13 @@ imagenAutor: pious
        nuestra función original ContextoConexion => LectorBD[ActorRef]
        en una función ContextoConexion => LectorBD[B] donde B es cualquier tipo de objeto.
        Además, al definir map, flatMap y filter ganamos otra funcionalidad: podremos extraer
-       nuestras funciones un un "for comprehension".
+       nuestras funciones con un "for comprehension".
     </p>
     <p>
       El método apply es el que se encarga de recibir el parámetro ContextoConexion y 
       aplicarlo a nuestra función ConextoConexion => A. Esto nos dará como 
       resultado un objeto de tipo A.
-      El segundo apply, que tiene 2 listas de parámetros, es todavía más útil que el primero, pues sabe construir el contexto a partir de un parámetro implicíto y 
+      El segundo apply, que tiene 2 listas de parámetros, es todavía más útil que el primero, pues sabe construir el contexto a partir de un parámetro implícito y 
       otro explícito.      
     </p>
   </p>
@@ -139,7 +139,7 @@ imagenAutor: pious
   data-gist-line="24-29"
   data-gist-hide-footer="true"></code>
     <p>
-      En nuestro companion object, definimos 1 función utilitaria (simple[A]) que convierte
+      En nuestro companion object, definimos una función utilitaria (simple[A]) que convierte
       cualquier valor A en un Monad LectorBD[A].
     </p>
     <p>
@@ -177,7 +177,7 @@ imagenAutor: pious
     <p>
       Segundo, invoco al companion object de mi actor con ServicioBDUsuario(). Este llamado
       invoca al método apply(nombre: Option[String] = None) de object ServicioBDUsuario. 
-      Como no estoy pasandole ningún parámetro, se invocará con un valor None. Esta 
+      Como no estoy pasándole ningún parámetro, se invocará con un valor None. Esta 
       invocación, me da un objeto Monádico LectorBD[ActorRef] (osea,
       una función ContextoConexion => ActorRef).
     </p>
@@ -185,7 +185,7 @@ imagenAutor: pious
       Luego, demuestro como usar la función de dos formas distintas para obtener el mismo
       valor: primero con un map, y luego con un for. Nótese, que tanto el resultado del
       map como del for, es un objeto de tipo LectorBD[Future[Option[Usuario]]].
-      Lo único que ocupamos ahora, es simplemente aplicarle una conexion de base de datos
+      Lo único que ocupamos ahora, es simplemente aplicarle una conexión de base de datos
       a ambos resultados para obtener sus contenidos (Future[Option[Usuario]]). Lo bueno
       de todo esto es que, como podrán ver, en ningún momento me he preocupado
       por mi conexión a base de datos. Es más, pareciera que no la necesito,
