@@ -9,7 +9,7 @@ imagenAutor: pious
 <div class="justificado">
   <p>
     Muchas veces, al comenzar a trabajar en Scala nos encontramos con los razgos o "traits",
-    que desafortunamente tienen a confundir a los que se inician en Scala. Veremos que
+    que desafortunadamente tienden a confundir a los que se inician en Scala. Veremos que
     en realidad, los traits no solamente son un tema simple y sencillo, sino que además,
     proveen una gran cantidad de facilidades que nos permitirán programar mejor.
   </p>
@@ -23,7 +23,7 @@ imagenAutor: pious
     En resumen, los traits de Scala son interfaces de Java que pueden tener funciones 
     implementadas.
     Ahora, los traits de scala son una característica realmente poderosa del lenguaje y 
-    hay varias cosas interesantes que se pueden hacer con ellos. Primero, veamos
+    hay varias tareas interesantes que se pueden hacer con ellos. Primero, veamos
     su uso más básico: como interfaces de Java.    
   </p>
 
@@ -68,12 +68,12 @@ imagenAutor: pious
   </p>
   <p>
     Al ver que los traits nos permiten definir comportamiento, y que podemos extender de 
-    múltiples traits al mismo tiempo, ¡parece que de inmediato se encidiesen todas las 
+    múltiples traits al mismo tiempo, ¡parece que de inmediato se encendieran todas las 
     alarmas de herencia múltiple!, por que de hecho, los traits son una forma de herencia
     múltiple.     
   </p>  
   <p>
-    Por dicha, Scala tiene una elegante forma de resolver el 
+    Para nuestra suerte, Scala tiene una elegante forma de resolver el 
     <a href="http://es.wikipedia.org/wiki/Problema_del_diamante">"Problema del diamante"</a>.
     Pero antes de pasar a este tema, veamos un último ejemplo de composición (que nos 
     servirá luego para explicar la solución al problema del diamante).    
@@ -113,7 +113,7 @@ imagenAutor: pious
     data-gist-hide-footer="true"></code>
   <p>
     Podemos ver que instanciar una clase "MiOP" y el resultado de su operación "op" son
-    los esperados. Qué pasará si mezclamos el trait "Doblado" en la ecuación:
+    los esperados. ¿Qué pasará si mezclamos el trait "Doblado" en la ecuación?:
   </p>
   <code data-gist-id="7605595" 
     data-gist-file="Output.scala"
@@ -122,7 +122,7 @@ imagenAutor: pious
     <p>
       Ahora sí podemos ver como el trait "Doblado" ha modificado radicalmente el 
       comportamiento de nuestra operación "op". Debido a que este "artefacto" es bastante
-      común, en Scala es posible mezclar (mix in) los traits a la hora de instanciación 
+      común, en Scala es posible mezclar (mix in) los traits a la hora del instanciamiento 
       del objeto. Con esto, no es necesario estar creando definiciones de clases que 
       implementen los traits:
     </p>
