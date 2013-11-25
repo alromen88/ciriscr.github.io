@@ -1,6 +1,6 @@
 name: Blog de Ciris
 markdown: redcarpet
 pygments: true
-lsi: true
+lsi: false
 port: 8080
 paginate: 10
